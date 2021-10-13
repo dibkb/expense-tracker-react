@@ -1,38 +1,83 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #1c1c1c;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 400;
+}
+.container {
+  max-width: 1500px;
+  margin: 12px auto;
+  padding: 0 12px;
+}
+.expense-form {
+  border: 1px solid wheat;
+  padding: 1rem;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+.expense-form input,select{
+  padding: 0.3rem 2rem;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+label >*{
+  margin: 0 1rem;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.expense-form button {
+  border: none;
+  background-color: #fff;
+  color: #1c1c1c;
+  padding: 0.2rem 2rem;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.balance {
+  border: 1px solid wheat;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+.balance > * {
+  margin: 1rem 0;
+}
+.balance-info > * {
+  margin: 1rem 0;
+}
+.row-expence,
+.row-expence > *,
+.expense-expense {
+  color: #ff3737;
+}
+.row-income > *,
+.expense-income {
+  color: #6cf319;
+}
+.expense-container {
+  border: 1px solid wheat;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+.expense-item {
+  border: 0.6px solid #5c5c5c;
+  padding: 1rem;
+  margin: 1rem 0;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+}
+.expense-item >*:not(.expense-title){
+  flex-basis: 20%;
+  /* text-align: center; */
+}
+.expense-title{
+  flex-basis: 40%;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.expense-expense::before{
+  content: "-";
+}
+.expense-income::before{
+  content: "+";
 }
